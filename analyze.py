@@ -4,12 +4,11 @@
 
 import numpy as np
 import cv2
-import time
 import os
 
 
 def analyze_picture(file_name):
-    time.sleep(3)
+
     # 解析結果の人数をreturnするために空のリストを作成する
     return_human = []
 

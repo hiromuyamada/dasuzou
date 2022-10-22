@@ -1,9 +1,7 @@
 from flask import Flask
 from flask import render_template
-from function import write_img,create_ramdom_chr,capture_pic
+from function import capture_pic
 from analyze import analyze_picture
-
-import cv2
 
 app = Flask(__name__,static_folder='.', static_url_path='',template_folder='template')
 

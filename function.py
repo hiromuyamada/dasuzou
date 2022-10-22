@@ -1,7 +1,7 @@
 import cv2
 import random
 import string
-from analyze import analyze_picture
+import datetime
 
 #テスト用関数
 def return_string():
@@ -13,7 +13,7 @@ def capture_pic():
 
     #キャプチャを保存
     ret, frame = cap.read()
-    file_name = create_ramdom_chr(16)
+    file_name = create_datetime_string() + "_" + create_ramdom_chr(6)
     write_img(file_name,frame)
 
     #メモリを解放して終了するためのコマンド
@@ -30,3 +30,7 @@ def write_img(file_name:str ,img):
 def create_ramdom_chr(n: int) -> str:
     random_list = [random.choice(string.ascii_letters) for n in range(n)]
     return "".join(random_list)
+
+#現在時刻の文字列を生成
+def create_datetime_string() -> str:
+    return datetime.datetime.now().strftime('%Y%m%d%H%M%S')
