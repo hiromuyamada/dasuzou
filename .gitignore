@@ -1,0 +1,4 @@
+__pycache__
+img/*
+!img/img_out/.gitkeep
+!.gitkeep
