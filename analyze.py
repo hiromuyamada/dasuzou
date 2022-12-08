@@ -10,7 +10,7 @@ import os
 def analyze_picture(file_name):
 
     # 解析結果の人数をreturnするために空のリストを作成する
-    return_human = []
+    return_human = ""
 
     # 入出力ファイル
     input_dir = './img/'
@@ -47,8 +47,8 @@ def analyze_picture(file_name):
     # ファイルを保存
     cv2.imwrite(output_dir + file, image)
     print(file + ":" + str(len(human)) + "人")
-    return_human.append(len(human))
-    print(return_human)
+    return_human = str(len(human))
+    # print(return_human)
 
     #ファイル削除
     os.remove(file_path)
